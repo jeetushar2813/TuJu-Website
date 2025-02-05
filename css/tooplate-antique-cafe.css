@@ -369,8 +369,23 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
     padding: 20px; /* Space inside each block */
     box-sizing: border-box; /* Include padding in width calculations */
   }
+
+  .uspsix-container {
+    flex: 1 1 calc(8% - 20px); /* Take 1/3 of the row minus gap */
+    max-width: calc(8% - 20px); /* Prevent it from exceeding 1/3 of the row */
+    min-width: 250px; /* Ensure a minimum width before breaking into rows */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for containers */
+    padding: 20px; /* Space inside each block */
+    box-sizing: border-box; /* Include padding in width calculations */
+  }
   
+  .icon{
+    
+  }
   .icon img {
+    image-orientation: 90deg;
     width: 64px; /* Ensure icons are sized consistently */
     height: 64px;
     margin-bottom: 10px; /* Add space below the icon */
@@ -434,6 +449,12 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
       max-width: calc(50% - 10px); /* Ensure max width aligns */
       min-width: 200px; /* Set a smaller minimum width */
     }
+
+    .uspsix-container {
+        flex: 1 1 calc(50% - 10px); /* Adjust to 2 per row */
+        max-width: calc(50% - 10px); /* Ensure max width aligns */
+        min-width: 200px; /* Set a smaller minimum width */
+      }
   }
 
   @media (max-width: 500px) {
@@ -441,6 +462,10 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
       flex: 1 1 100%; /* Full-width for single column */
       max-width: 100%; /* Ensures no overflow */
     }
+    .uspsix-container {
+        flex: 1 1 100%; /* Full-width for single column */
+        max-width: 100%; /* Ensures no overflow */
+      }
   }
 
 @media (max-width: 370px) {
