@@ -7,8 +7,10 @@ https://www.tooplate.com/view/2126-antique-cafe
 */
 
 body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #666;
+    font-family: 'Inter', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
 }
 
 p a {
@@ -27,9 +29,11 @@ p a:hover {
 footer span a { color: #FFF; }
 
 .tm-logo-font {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Cinzel", serif;
 }
-
+.tm-rest-font {
+    font-family: "inter", serif;
+}
 .tm-container {
     max-width: 1200px;
 }
@@ -66,6 +70,7 @@ footer span a { color: #FFF; }
 
 .tm-text-brown {
     color: #544639;
+    font-weight: bold;
 }
 
 .tm-text-green {
@@ -217,7 +222,9 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
     overflow: hidden;
     padding: 20px;
 }
-
+.tm-rest-font {
+    font-family: 'Times New Roman', serif;
+}
 .product-category
 {
     padding: 0 10vw;
@@ -262,6 +269,17 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+.product-image2 img {
+    width: 100%; /* Full width to adapt to the container */
+    max-width: 300px; /* Prevents images from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the entire image is visible */
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Fixes alignment issues */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 .product-thumb{
     width: 100%;
@@ -381,11 +399,7 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
     box-sizing: border-box; /* Include padding in width calculations */
   }
   
-  .icon{
-    
-  }
   .icon img {
-    image-orientation: 90deg;
     width: 64px; /* Ensure icons are sized consistently */
     height: 64px;
     margin-bottom: 10px; /* Add space below the icon */
@@ -410,6 +424,61 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
   }
 
 
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center; /* Ensure all items are centered */
+    align-items: center;  /* Vertically center items */
+}
+
+.feature-item {
+    max-width: 200px; /* Limit the width of each box */
+    text-align: center; /* Center the content horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside */
+    justify-content: center;
+}
+
+.feature-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: #544639;
+    padding: 5px;
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #795548;
+    line-height: 1.4;
+    text-align: center; /* Ensure text is also centered */
+}
+
+.locationtext {
+
+}
+/* For full resolution - show 3 items per row */
+@media (min-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For mobile view - show 2 items per row */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 @media (min-width: 768px) {
     #tm-nav.scroll .tm-container {
         padding-top: 10px;
@@ -424,6 +493,24 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
         right: 0;
         border-radius: 5px;
     }
+    .product-image2 img {
+        width: 90%; /* Scales down the image for smaller devices */
+        height: auto; /* Keeps the aspect ratio */
+        max-width: none; /* Removes the 300px limit for flexibility */
+        
+    }
+    .product-image2 {
+        margin-top: -100px;
+        margin-bottom: 5px;
+    }
+
+    .floor-plan-container {
+        text-align: center; /* Ensures text and images are aligned */
+        padding: 10px; /* Adds padding for better spacing */
+    }
+    .locationtext{
+        margin-top: -100px;
+    }
 }
 
 @media (max-width: 639px) {
@@ -434,7 +521,7 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
         flex: 0 0 auto;
         scale: 60%;
         margin-top: 10%;
-        margin-right: -100px; /* Reduced margin-right for less space between cards */
+        margin-right: -10px; /* Reduced margin-right for less space between cards */
         margin-left: -100px;
     }
 }
