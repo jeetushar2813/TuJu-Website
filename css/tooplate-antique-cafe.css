@@ -463,7 +463,7 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 .locationtext {
-
+    margin-top: -100px;
 }
 .enlargetext{
     margin-top: -20px;
