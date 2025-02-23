@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16754643486"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16754643486');
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +38,6 @@
 
     <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
     <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
-    
-    
 <!--
 
 Tooplate 2126 Antique Cafe
@@ -42,9 +50,10 @@ https://www.tooplate.com/view/2126-antique-cafe
 
     <!-- WhatsApp Icon -->
     
-    <a href="https://wa.link/aben8f" class="whatsapp-button" target="_blank" style="position: fixed; right: 15px; bottom: 2%; z-index: 6">
+    <a href="https://wa.link/aben8f" onclick="return gtag_report_conversion('https://wa.link/aben8f');" class="whatsapp-button" target="_blank" style="position: fixed; right: 15px; bottom: 2%; z-index: 6">
         <img src="img/whatsapp.webp" alt="whatsapp button" width="50" height="50">
     </a>
+    
 
     <a href="#contact" class="whatsapp-button" target="_blank" style="position: fixed; right: 0px; bottom: 20%; z-index: 6">
         <img src="img/register.png" alt="whatsapp button" width="50" height="200">
@@ -245,8 +254,6 @@ https://www.tooplate.com/view/2126-antique-cafe
         <br><br>
     <!-- </section> -->
     
-
-
     <section id= "gallery" class="product bg-white">
         <h2 class = "tm-rest-font product-category tm-text-brown text-center text-4xl">Facilities</h2>
         
@@ -490,5 +497,21 @@ https://www.tooplate.com/view/2126-antique-cafe
         });
     </script>
     <script src="js/script.js"></script>
+    <script>
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-16754643486/itSXCIiFkeIZEJ6knrU-',
+              'value': 1.0,
+              'currency': 'MYR',
+              'event_callback': callback
+          });
+          return false;
+        }
+        </script>
 </body>
 </html>
