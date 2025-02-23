@@ -455,14 +455,18 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
 
 .feature-item p {
     margin: 0;
-    font-size: 16px;
+    /* font-size: 16px; */
+    height: 48px ;
     color: #795548;
     line-height: 1.4;
     text-align: center; /* Ensure text is also centered */
 }
 
 .locationtext {
-
+    margin-top: -100px;
+}
+.enlargetext{
+    margin-top: -20px;
 }
 /* For full resolution - show 3 items per row */
 @media (min-width: 1024px) {
@@ -511,6 +515,10 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
     .locationtext{
         margin-top: -100px;
     }
+    .enlargetext{
+        margin-top: -20px;
+    }
+    
 }
 
 @media (max-width: 639px) {
@@ -542,6 +550,9 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
         max-width: calc(50% - 10px); /* Ensure max width aligns */
         min-width: 200px; /* Set a smaller minimum width */
       }
+      .enlargetext{
+        margin-top: -20px;
+    }
   }
 
   @media (max-width: 500px) {
